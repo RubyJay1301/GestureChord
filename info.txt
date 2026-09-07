@@ -1,0 +1,55 @@
+Structure for the code:
+
+Project
+|
+|-- src/
+|   |-- webcam.py
+|   |-- detector.py
+|   |-- action_manager.py
+|   |-- model.py
+|   |-- settings.py
+|
+|-- tests/
+|   |-- test_detector.py
+|   |-- test_actions.py
+|
+|-- requirements.txt
+|-- README.md
+|-- main.py
+
+main.py:
+start camera -> get frame -> send frame to detector -> get detection -> send
+detection to action manager -> repeat
+(from src.webcam import Webcam etc to import the class in src folder)
+
+webcam.py:
+- initialise Webcam class
+- gets frames from webcam
+
+detector.py:
+ - Initialise Detector class 
+ - interprets what is in a frame
+ - import MediaPipe and process each webcam frame
+ - This will be responsible for turning MediaPipe's hand landmarks into something meaningful
+
+ action_manager.py:
+ - initialise ActionManager class
+ - decides what function to call
+- Action manager does not use MediaPipe instead it will look like this:
+if gesture == 'thumbs_up':
+  statement
+
+settings.py:
+- initialises Settings class
+- Configuration
+- MediaPipe settings
+
+12 basic major chords and 12 basic minor chords:
+- C, G, F, D, A, E, B, F#, Bb, Eb, Ab, Db Major
+- A, E, D, B, F#, C#, G#, D#, G, C, F, Bb Minor
+
+12 hand gestures on left hand and 2 with right hand to switch between major and minor chorse
+
+
+
+ 
