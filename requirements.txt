@@ -2,4 +2,5 @@ opencv-python
 mediapipe
 numpy
 pytest
-sounddevice
+pygame
+mediapipe<0.10.14
