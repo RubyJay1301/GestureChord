@@ -6,7 +6,7 @@ logger = logging.getLogger(__name__)
 class Webcam:
     def __init__(self, camera_index=0, width=1280, height=720):
         self.camera_index = camera_index
-        self.camera = cv2.VideoCapture(camera_index, cv2.CAP_AVFOUNDATION)
+        self.camera = cv2.VideoCapture(camera_index)
 
         if not self.camera.isOpened():
             raise RuntimeError(
