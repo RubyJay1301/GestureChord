@@ -3,6 +3,6 @@ from dataclasses import dataclass
 @dataclass
 class Detection:
     handedness: str
-    gesture: str
+    gesture: tuple[int, ...]
     confidence: float
     
