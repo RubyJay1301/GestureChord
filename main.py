@@ -1,5 +1,6 @@
 import logging
 import cv2
+import mediapipe as mp
 
 from src.webcam import Webcam
 from src.detector import Detector
@@ -41,6 +42,33 @@ def main():
             detections = detector.detect(frame)
 
             action_manager.handle(detections)
+
+            for idx, detection in enumerate(detections):
+                cv2.putText(
+                    frame,
+                    f"{action_manager.mode.upper()}: {action_manager.current_chord}",
+                    (10, 40),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    1,
+                    (0, 255, 255),
+                    2
+                )
+
+            for idx, detection in enumerate(detections):
+                if detection.handedness == "Left":
+                    role_text = f"Left Hand (Mode Control): {detection.gesture}"
+                else:
+                    role_text = f"Right Hand (Chord Control): {detection.gesture}"
+
+                cv2.putText(
+                    frame,
+                    role_text,
+                    (10, 80 + (idx * 40)),
+                    cv2.FONT_HERSHEY_SIMPLEX,
+                    0.8,
+                    (0, 255, 0),
+                    2
+                )
 
             cv2.imshow(
                 settings.window_name,
