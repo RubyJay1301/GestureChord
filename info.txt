@@ -48,7 +48,25 @@ settings.py:
 - C, G, F, D, A, E, B, F#, Bb, Eb, Ab, Db Major
 - A, E, D, B, F#, C#, G#, D#, G, C, F, Bb Minor
 
-12 hand gestures on left hand and 2 with right hand to switch between major and minor chorse
+12 hand gestures on left hand and 2 with right hand to switch between major and minor chords
+
+Right Hand Gestures:
+Open hand : Major
+Closed hand : Minor
+
+Left Hand Gestures:
+Index only: C
+Middle only: G
+Pinky only: F
+Thumb and index: D
+index and Middle: A
+Thumb and Pinky: E
+Thumb Index and Middle: B
+All fingers: F#
+Index Middle and Ring: Bb
+Index and Pinky: Eb
+Thumb Index and Pinky: Ab
+Index Middle Ring and Pinky: Db
 
 
 
