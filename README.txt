@@ -1,3 +1,6 @@
+To install the libraries needed: pip install -r requirements.txt 
+To run: python main.py
+
 Skills and concepts used in this project:
  - Practical experience with edge vision frameworks (MediaPipe, OpenCV)
  - Handling real-time, frame-by-frame data streams and processing 3D spatial key points with minimal latency
